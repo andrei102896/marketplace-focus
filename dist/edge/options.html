@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Focus Mode Settings</title>
+    <style>
+        :root {
+            --bg: #0b1018;
+            --bg-elevated: #121a26;
+            --bg-elevated-2: #151f2e;
+            --border: #263247;
+            --border-strong: #324461;
+            --text: #eef4ff;
+            --text-muted: #a6b3c9;
+            --text-soft: #8a98b0;
+            --primary: #4d8dff;
+            --primary-strong: #2f73ee;
+            --success: #5fd18b;
+            --danger: #ff8da1;
+            --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(900px 520px at 110% -20%, rgba(77, 141, 255, 0.12) 0%, transparent 58%),
+                linear-gradient(180deg, #0f1622 0%, var(--bg) 100%);
+        }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 36px 18px 48px;
+        }
+
+        .hero {
+            margin-bottom: 18px;
+        }
+
+        .eyebrow {
+            margin: 0;
+            display: inline-block;
+            color: var(--text-soft);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        h1 {
+            margin: 10px 0 8px;
+            font-size: clamp(30px, 5vw, 44px);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+
+        .subtitle {
+            margin: 0;
+            max-width: 70ch;
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        #settings-form {
+            display: grid;
+            gap: 12px;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 8px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: rgba(17, 26, 41, 0.8);
+            box-shadow: var(--shadow);
+        }
+
+        .tab-button {
+            border: 1px solid transparent;
+            background: #121b2a;
+            color: var(--text-muted);
+            border-radius: 9px;
+            padding: 9px 12px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+        }
+
+        .tab-button:hover {
+            border-color: var(--border-strong);
+            color: var(--text);
+        }
+
+        .tab-button.is-active {
+            background: rgba(77, 141, 255, 0.2);
+            border-color: var(--primary);
+            color: var(--text);
+        }
+
+        .tab-button:focus-visible {
+            outline: 2px solid rgba(77, 141, 255, 0.6);
+            outline-offset: 2px;
+        }
+
+        .tab-panel {
+            display: grid;
+            gap: 12px;
+        }
+
+        .tab-panel[hidden] {
+            display: none;
+        }
+
+        .panel {
+            background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-elevated-2) 100%);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            padding: 18px;
+        }
+
+        .panel-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .panel h2 {
+            margin: 0;
+            font-size: clamp(20px, 2.2vw, 26px);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--text);
+        }
+
+        .chip {
+            display: inline-block;
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--text-soft);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 4px 8px;
+            background: rgba(0, 0, 0, 0.15);
+            font-weight: 600;
+        }
+
+        .panel-description {
+            margin: 0 0 12px;
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .option-grid {
+            display: grid;
+            gap: 8px;
+        }
+
+        .mode-option {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid var(--border);
+            background: #121b2a;
+            border-radius: 12px;
+            padding: 13px;
+            transition: border-color 0.16s ease, box-shadow 0.16s ease;
+            cursor: pointer;
+        }
+
+        .mode-option:hover {
+            border-color: var(--border-strong);
+        }
+
+        .mode-option input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .mode-title {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .mode-copy {
+            display: block;
+            font-size: 13px;
+            line-height: 1.4;
+            color: var(--text-muted);
+        }
+
+        .mode-dot {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #5f7090;
+            display: grid;
+            place-items: center;
+            background: #0f1624;
+            transition: border-color 0.16s ease;
+        }
+
+        .mode-dot::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: transparent;
+            transition: background-color 0.16s ease;
+        }
+
+        .mode-option input:checked ~ .mode-dot {
+            border-color: var(--primary);
+        }
+
+        .mode-option input:checked ~ .mode-dot::before {
+            background: var(--primary);
+        }
+
+        .mode-option:has(input:checked) {
+            border-color: var(--primary);
+            box-shadow: inset 0 0 0 1px rgba(77, 141, 255, 0.3);
+            background: #162338;
+        }
+
+        .mode-option:has(input:focus-visible) {
+            outline: 2px solid rgba(77, 141, 255, 0.6);
+            outline-offset: 2px;
+        }
+
+        .setting-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            border: 1px solid var(--border);
+            background: #121b2a;
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .setting-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .setting-copy {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+            display: block;
+        }
+
+        .field-grid {
+            display: grid;
+            gap: 10px;
+            max-width: 420px;
+        }
+
+        .field {
+            display: grid;
+            gap: 6px;
+        }
+
+        .field label {
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .field input[type="number"],
+        .field input[type="time"],
+        .field textarea {
+            border: 1px solid var(--border-strong);
+            border-radius: 10px;
+            background: #111a29;
+            color: var(--text);
+            padding: 10px 12px;
+            font-size: 14px;
+            font-family: inherit;
+            outline: 0;
+        }
+
+        .field textarea {
+            min-height: 118px;
+            resize: vertical;
+            line-height: 1.4;
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(77, 141, 255, 0.2);
+        }
+
+        .hint {
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 12px;
+            line-height: 1.45;
+        }
+
+        .schedule-time-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(140px, 1fr));
+            gap: 10px;
+            max-width: 420px;
+        }
+
+        .day-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .day-chip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .day-chip input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .day-chip span {
+            display: inline-block;
+            min-width: 44px;
+            text-align: center;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: #111a29;
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 7px 10px;
+            transition: border-color 0.16s ease, background-color 0.16s ease, color 0.16s ease;
+        }
+
+        .day-chip input:checked + span {
+            background: rgba(77, 141, 255, 0.2);
+            border-color: var(--primary);
+            color: var(--text);
+        }
+
+        .day-chip input:focus-visible + span {
+            outline: 2px solid rgba(77, 141, 255, 0.6);
+            outline-offset: 2px;
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        #save-button {
+            border: 0;
+            border-radius: 10px;
+            padding: 11px 16px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background-color 0.16s ease, transform 0.16s ease;
+        }
+
+        #save-button:hover {
+            background: var(--primary-strong);
+            transform: translateY(-1px);
+        }
+
+        #save-button:active {
+            transform: translateY(0);
+        }
+
+        #status-message {
+            min-height: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: var(--text-muted);
+        }
+
+        #status-message.success {
+            color: var(--success);
+        }
+
+        #status-message.error {
+            color: var(--danger);
+        }
+
+        @media (max-width: 640px) {
+            main {
+                padding: 24px 14px 36px;
+            }
+
+            h1 {
+                font-size: clamp(28px, 10vw, 40px);
+            }
+
+            .tabs {
+                padding: 6px;
+            }
+
+            .tab-button {
+                flex: 1 1 calc(50% - 8px);
+            }
+
+            .panel {
+                padding: 15px;
+                border-radius: 12px;
+            }
+
+            .panel-head {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .schedule-time-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .actions {
+                align-items: stretch;
+            }
+
+            #save-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header class="hero">
+        <p class="eyebrow" data-i18n="optionsEyebrow">Focus Mode</p>
+        <h1 data-i18n="optionsTitle">Focus Mode Settings</h1>
+        <p class="subtitle" data-i18n="optionsSubtitle">Choose how strong the blocker should be, whether to use Hard Lock, and when blocking runs automatically.</p>
+    </header>
+
+    <form id="settings-form">
+        <div class="tabs" role="tablist" aria-label="Settings sections" data-i18n-aria-label="optionsTabsAriaLabel">
+            <button type="button" class="tab-button is-active" id="tab-trigger-blocking" role="tab" aria-selected="true" aria-controls="tab-panel-blocking" data-tab-trigger="blocking" data-i18n="optionsTabBlocking">Blocking</button>
+            <button type="button" class="tab-button" id="tab-trigger-controls" role="tab" aria-selected="false" aria-controls="tab-panel-controls" data-tab-trigger="controls" data-i18n="optionsTabControls">Controls</button>
+            <button type="button" class="tab-button" id="tab-trigger-schedule" role="tab" aria-selected="false" aria-controls="tab-panel-schedule" data-tab-trigger="schedule" data-i18n="optionsTabSchedule">Schedule</button>
+        </div>
+
+        <section class="tab-panel" id="tab-panel-blocking" role="tabpanel" aria-labelledby="tab-trigger-blocking" data-tab-panel="blocking">
+            <section class="panel">
+                <div class="panel-head">
+                    <h2 data-i18n="optionsBlockingModeTitle">How Strong Should Blocking Be?</h2>
+                    <span class="chip" data-i18n="optionsChipChooseOne">Choose One</span>
+                </div>
+                <p class="panel-description" data-i18n="optionsBlockingModeDescription">Pick what should happen when Facebook tries to show Reels.</p>
+
+                <div class="option-grid">
+                    <label class="mode-option">
+                        <input type="radio" name="block-mode" value="strict">
+                        <span class="mode-body">
+                            <span class="mode-title" data-i18n="optionsBlockingStrongTitle">Strong Blocking (Recommended)</span>
+                            <span class="mode-copy" data-i18n="optionsBlockingStrongDescription">Hides Reels buttons, blocks Reels links, and sends you back to Facebook Home if a Reels page opens.</span>
+                        </span>
+                        <span class="mode-dot" aria-hidden="true"></span>
+                    </label>
+
+                    <label class="mode-option">
+                        <input type="radio" name="block-mode" value="hide_only">
+                        <span class="mode-body">
+                            <span class="mode-title" data-i18n="optionsBlockingLightTitle">Light Blocking</span>
+                            <span class="mode-copy" data-i18n="optionsBlockingLightDescription">Only hides Reels buttons. If you open Reels directly, Facebook may still show it.</span>
+                        </span>
+                        <span class="mode-dot" aria-hidden="true"></span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-head">
+                    <h2 data-i18n="optionsPauseTitle">Quick Pause Time</h2>
+                    <span class="chip" data-i18n="optionsPauseChip">Pause Button</span>
+                </div>
+                <p class="panel-description" data-i18n="optionsPauseDescription">This sets how long the Pause button keeps blocking turned off.</p>
+
+                <div class="field-grid">
+                    <div class="field">
+                        <label for="default-pause-minutes" data-i18n="optionsPauseFieldLabel">How long should Pause last?</label>
+                        <input id="default-pause-minutes" type="number" min="5" max="180" step="5" required>
+                        <p class="hint" data-i18n="optionsPauseHint">Pick any value from 5 to 180 minutes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-head">
+                    <h2 data-i18n="optionsExceptionsTitle">Smart Exceptions</h2>
+                    <span class="chip" data-i18n="optionsExceptionsChip">Allow List</span>
+                </div>
+                <p class="panel-description" data-i18n="optionsExceptionsDescription">Allow Reels on specific pages or profiles by adding one rule per line.</p>
+
+                <div class="field-grid" style="max-width: 100%;">
+                    <div class="field">
+                        <label for="exceptions-input" data-i18n="optionsExceptionsFieldLabel">Allowed pages/profiles</label>
+                        <textarea id="exceptions-input" data-i18n-placeholder="optionsExceptionsPlaceholder" placeholder="Examples:
+/your-profile
+https://www.facebook.com/your.page
+facebook.com/another.page"></textarea>
+                        <p class="hint" data-i18n="optionsExceptionsHint">Rules can be full URLs, host/path patterns (facebook.com/page), or path prefixes (/your-profile).</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="tab-panel" id="tab-panel-controls" role="tabpanel" aria-labelledby="tab-trigger-controls" data-tab-panel="controls" hidden>
+            <section class="panel">
+                <div class="panel-head">
+                    <h2 data-i18n="optionsFrictionTitle">Friction Controls</h2>
+                    <span class="chip" data-i18n="optionsFrictionChip">Confirmations</span>
+                </div>
+                <p class="panel-description" data-i18n="optionsFrictionDescription">Add confirmation prompts before actions that can reduce blocking.</p>
+
+                <label class="setting-row" for="confirm-before-disable">
+                    <span>
+                        <span class="setting-title" data-i18n="optionsConfirmDisableTitle">Confirm before turning blocking off</span>
+                        <span class="setting-copy" data-i18n="optionsConfirmDisableDescription">You will need to confirm before disabling the blocker.</span>
+                    </span>
+                    <input id="confirm-before-disable" type="checkbox">
+                </label>
+
+                <label class="setting-row" for="confirm-before-pause">
+                    <span>
+                        <span class="setting-title" data-i18n="optionsConfirmPauseTitle">Confirm before pause/resume</span>
+                        <span class="setting-copy" data-i18n="optionsConfirmPauseDescription">You will need to confirm before pausing or resuming blocking.</span>
+                    </span>
+                    <input id="confirm-before-pause" type="checkbox">
+                </label>
+            </section>
+
+            <section class="panel">
+                <div class="panel-head">
+                    <h2 data-i18n="optionsHardLockTitle">Hard Lock</h2>
+                    <span class="chip" data-i18n="optionsHardLockChip">Anti-Bypass</span>
+                </div>
+                <p class="panel-description" data-i18n="optionsHardLockDescription">Hard Lock removes quick pause and can delay turning blocking off.</p>
+
+                <label class="setting-row" for="hard-lock-enabled">
+                    <span>
+                        <span class="setting-title" data-i18n="optionsHardLockEnableTitle">Enable Hard Lock</span>
+                        <span class="setting-copy" data-i18n="optionsHardLockEnableDescription">Pause is disabled while Hard Lock is on.</span>
+                    </span>
+                    <input id="hard-lock-enabled" type="checkbox">
+                </label>
+
+                <div class="field-grid">
+                    <div class="field">
+                        <label for="hard-lock-cooldown-minutes" data-i18n="optionsHardLockCooldownLabel">Turn-off delay (minutes)</label>
+                        <input id="hard-lock-cooldown-minutes" type="number" min="0" max="180" step="1">
+                        <p class="hint" data-i18n="optionsHardLockCooldownHint">Set to 0 for instant off. Any higher value adds a countdown before blocking turns off.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="tab-panel" id="tab-panel-schedule" role="tabpanel" aria-labelledby="tab-trigger-schedule" data-tab-panel="schedule" hidden>
+            <section class="panel">
+                <div class="panel-head">
+                    <h2 data-i18n="optionsScheduleTitle">Schedule</h2>
+                    <span class="chip" data-i18n="optionsScheduleChip">Auto On/Off</span>
+                </div>
+                <p class="panel-description" data-i18n="optionsScheduleDescription">Automatically run blocking during selected days and hours.</p>
+
+                <label class="setting-row" for="schedule-enabled">
+                    <span>
+                        <span class="setting-title" data-i18n="optionsScheduleEnableTitle">Enable Schedule</span>
+                        <span class="setting-copy" data-i18n="optionsScheduleEnableDescription">When enabled, the schedule controls when blocking is active.</span>
+                    </span>
+                    <input id="schedule-enabled" type="checkbox">
+                </label>
+
+                <div class="schedule-time-grid">
+                    <div class="field">
+                        <label for="schedule-start-time" data-i18n="optionsScheduleStartLabel">Start time</label>
+                        <input id="schedule-start-time" type="time" required>
+                    </div>
+                    <div class="field">
+                        <label for="schedule-end-time" data-i18n="optionsScheduleEndLabel">End time</label>
+                        <input id="schedule-end-time" type="time" required>
+                    </div>
+                </div>
+
+                <div class="field" style="margin-top: 10px;">
+                    <label data-i18n="optionsScheduleDaysLabel">Days</label>
+                    <div class="day-grid">
+                        <label class="day-chip"><input type="checkbox" name="schedule-day" value="1"><span data-i18n="weekdayMon">Mon</span></label>
+                        <label class="day-chip"><input type="checkbox" name="schedule-day" value="2"><span data-i18n="weekdayTue">Tue</span></label>
+                        <label class="day-chip"><input type="checkbox" name="schedule-day" value="3"><span data-i18n="weekdayWed">Wed</span></label>
+                        <label class="day-chip"><input type="checkbox" name="schedule-day" value="4"><span data-i18n="weekdayThu">Thu</span></label>
+                        <label class="day-chip"><input type="checkbox" name="schedule-day" value="5"><span data-i18n="weekdayFri">Fri</span></label>
+                        <label class="day-chip"><input type="checkbox" name="schedule-day" value="6"><span data-i18n="weekdaySat">Sat</span></label>
+                        <label class="day-chip"><input type="checkbox" name="schedule-day" value="0"><span data-i18n="weekdaySun">Sun</span></label>
+                    </div>
+                    <p class="hint" data-i18n="optionsScheduleDaysHint">For overnight schedules, choose the day when the schedule starts.</p>
+                </div>
+            </section>
+        </section>
+
+        <div class="actions">
+            <button id="save-button" type="submit" data-i18n="optionsSaveButton">Save changes</button>
+            <span id="status-message" aria-live="polite"></span>
+        </div>
+    </form>
+</main>
+
+<script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+{
+  "extName": {
+    "message": "Marketplace Focus: Block Facebook Reels"
+  },
+  "extDescription": {
+    "message": "Block Facebook Reels and stay focused on Marketplace deals. Hard Lock, scheduled blocking, smart exceptions. Free, no account."
+  },
+  "badgeTitleOn": {
+    "message": "Reels blocker is active"
+  },
+  "badgeTitleOff": {
+    "message": "Reels blocker is disabled"
+  },
+  "badgeTitlePaused": {
+    "message": "Reels blocker is paused"
+  },
+  "popupTitle": {
+    "message": "Focus Mode"
+  },
+  "popupSubtitle": {
+    "message": "Reels blocker with pause, lock, and schedule"
+  },
+  "popupBlockReelsLabel": {
+    "message": "Block Reels"
+  },
+  "popupLoading": {
+    "message": "Loading..."
+  },
+  "popupSettings": {
+    "message": "Settings"
+  },
+  "popupRate": {
+    "message": "Rate"
+  },
+  "popupSupport": {
+    "message": "Support"
+  },
+  "popupKeepBlocking": {
+    "message": "Keep blocking"
+  },
+  "popupHardLockOnButton": {
+    "message": "Hard Lock on"
+  },
+  "popupPauseButton": {
+    "message": "Pause $1m"
+  },
+  "popupResumeNow": {
+    "message": "Resume now"
+  },
+  "popupStatusHardLockPending": {
+    "message": "Hard Lock: turning off in $1."
+  },
+  "popupStatusOutsideSchedule": {
+    "message": "Outside your schedule. Blocking will auto-enable during schedule."
+  },
+  "popupStatusBlockingDisabled": {
+    "message": "Blocking is disabled."
+  },
+  "popupStatusHardLockOn": {
+    "message": "Hard Lock is on. Pause is unavailable."
+  },
+  "popupStatusPaused": {
+    "message": "Paused ($1 left)"
+  },
+  "popupStatusBlockingActive": {
+    "message": "Blocking active."
+  },
+  "popupStatusBlockingActiveSchedule": {
+    "message": "Blocking active (schedule)."
+  },
+  "popupConfirmDisable": {
+    "message": "Turn off blocking?"
+  },
+  "popupConfirmResume": {
+    "message": "Resume blocking now?"
+  },
+  "popupConfirmPause": {
+    "message": "Pause blocking for $1 minutes?"
+  },
+  "optionsPageTitle": {
+    "message": "Focus Mode Settings"
+  },
+  "optionsEyebrow": {
+    "message": "Focus Mode"
+  },
+  "optionsTitle": {
+    "message": "Focus Mode Settings"
+  },
+  "optionsSubtitle": {
+    "message": "Choose how strong the blocker should be, whether to use Hard Lock, and when blocking runs automatically."
+  },
+  "optionsTabsAriaLabel": {
+    "message": "Settings sections"
+  },
+  "optionsTabBlocking": {
+    "message": "Blocking"
+  },
+  "optionsTabControls": {
+    "message": "Controls"
+  },
+  "optionsTabSchedule": {
+    "message": "Schedule"
+  },
+  "optionsBlockingModeTitle": {
+    "message": "How Strong Should Blocking Be?"
+  },
+  "optionsChipChooseOne": {
+    "message": "Choose One"
+  },
+  "optionsBlockingModeDescription": {
+    "message": "Pick what should happen when Facebook tries to show Reels."
+  },
+  "optionsBlockingStrongTitle": {
+    "message": "Strong Blocking (Recommended)"
+  },
+  "optionsBlockingStrongDescription": {
+    "message": "Hides Reels buttons, blocks Reels links, and sends you back to Facebook Home if a Reels page opens."
+  },
+  "optionsBlockingLightTitle": {
+    "message": "Light Blocking"
+  },
+  "optionsBlockingLightDescription": {
+    "message": "Only hides Reels buttons. If you open Reels directly, Facebook may still show it."
+  },
+  "optionsPauseTitle": {
+    "message": "Quick Pause Time"
+  },
+  "optionsPauseChip": {
+    "message": "Pause Button"
+  },
+  "optionsPauseDescription": {
+    "message": "This sets how long the Pause button keeps blocking turned off."
+  },
+  "optionsPauseFieldLabel": {
+    "message": "How long should Pause last?"
+  },
+  "optionsPauseHint": {
+    "message": "Pick any value from 5 to 180 minutes."
+  },
+  "optionsExceptionsTitle": {
+    "message": "Smart Exceptions"
+  },
+  "optionsExceptionsChip": {
+    "message": "Allow List"
+  },
+  "optionsExceptionsDescription": {
+    "message": "Allow Reels on specific pages or profiles by adding one rule per line."
+  },
+  "optionsExceptionsFieldLabel": {
+    "message": "Allowed pages/profiles"
+  },
+  "optionsExceptionsPlaceholder": {
+    "message": "Examples:\n/your-profile\nhttps://www.facebook.com/your.page\nfacebook.com/another.page"
+  },
+  "optionsExceptionsHint": {
+    "message": "Rules can be full URLs, host/path patterns (facebook.com/page), or path prefixes (/your-profile)."
+  },
+  "optionsFrictionTitle": {
+    "message": "Friction Controls"
+  },
+  "optionsFrictionChip": {
+    "message": "Confirmations"
+  },
+  "optionsFrictionDescription": {
+    "message": "Add confirmation prompts before actions that can reduce blocking."
+  },
+  "optionsConfirmDisableTitle": {
+    "message": "Confirm before turning blocking off"
+  },
+  "optionsConfirmDisableDescription": {
+    "message": "You will need to confirm before disabling the blocker."
+  },
+  "optionsConfirmPauseTitle": {
+    "message": "Confirm before pause/resume"
+  },
+  "optionsConfirmPauseDescription": {
+    "message": "You will need to confirm before pausing or resuming blocking."
+  },
+  "optionsHardLockTitle": {
+    "message": "Hard Lock"
+  },
+  "optionsHardLockChip": {
+    "message": "Anti-Bypass"
+  },
+  "optionsHardLockDescription": {
+    "message": "Hard Lock removes quick pause and can delay turning blocking off."
+  },
+  "optionsHardLockEnableTitle": {
+    "message": "Enable Hard Lock"
+  },
+  "optionsHardLockEnableDescription": {
+    "message": "Pause is disabled while Hard Lock is on."
+  },
+  "optionsHardLockCooldownLabel": {
+    "message": "Turn-off delay (minutes)"
+  },
+  "optionsHardLockCooldownHint": {
+    "message": "Set to 0 for instant off. Any higher value adds a countdown before blocking turns off."
+  },
+  "optionsScheduleTitle": {
+    "message": "Schedule"
+  },
+  "optionsScheduleChip": {
+    "message": "Auto On/Off"
+  },
+  "optionsScheduleDescription": {
+    "message": "Automatically run blocking during selected days and hours."
+  },
+  "optionsScheduleEnableTitle": {
+    "message": "Enable Schedule"
+  },
+  "optionsScheduleEnableDescription": {
+    "message": "When enabled, the schedule controls when blocking is active."
+  },
+  "optionsScheduleStartLabel": {
+    "message": "Start time"
+  },
+  "optionsScheduleEndLabel": {
+    "message": "End time"
+  },
+  "optionsScheduleDaysLabel": {
+    "message": "Days"
+  },
+  "weekdayMon": {
+    "message": "Mon"
+  },
+  "weekdayTue": {
+    "message": "Tue"
+  },
+  "weekdayWed": {
+    "message": "Wed"
+  },
+  "weekdayThu": {
+    "message": "Thu"
+  },
+  "weekdayFri": {
+    "message": "Fri"
+  },
+  "weekdaySat": {
+    "message": "Sat"
+  },
+  "weekdaySun": {
+    "message": "Sun"
+  },
+  "optionsScheduleDaysHint": {
+    "message": "For overnight schedules, choose the day when the schedule starts."
+  },
+  "optionsSaveButton": {
+    "message": "Save changes"
+  },
+  "optionsErrorSelectScheduleDay": {
+    "message": "Select at least one day for schedule."
+  },
+  "optionsSaveError": {
+    "message": "Could not save settings."
+  },
+  "optionsSaveSuccess": {
+    "message": "Settings saved."
+  }
+}

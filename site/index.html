@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marketplace Focus | Block Facebook Reels and Stay on Deals</title>
+  <meta
+    name="description"
+    content="Marketplace Focus is a free browser extension that blocks Facebook Reels so you can stay focused on Marketplace deals. Includes pause, hard lock, schedules, and smart exceptions."
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="google-site-verification" content="u2n6aeqyhS2b-wux14akQoMOsRkhc5N6rnJ4H27Pc38" />
+  <meta name="theme-color" content="#101a33" />
+  <link rel="canonical" href="https://marketplace-focus.vercel.app/" />
+  <link rel="icon" href="/assets/logo_v2.png" type="image/png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marketplace Focus | Block Facebook Reels and Stay on Deals" />
+  <meta
+    property="og:description"
+    content="Free extension for Chrome, Edge, and Firefox. Block Reels, add friction controls, and run scheduled focus windows."
+  />
+  <meta property="og:url" content="https://marketplace-focus.vercel.app/" />
+  <meta property="og:image" content="https://marketplace-focus.vercel.app/assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marketplace Focus | Block Facebook Reels" />
+  <meta
+    name="twitter:description"
+    content="Cut Facebook Reels distractions while shopping Marketplace. Built-in pause, hard lock, and schedule."
+  />
+  <meta name="twitter:image" content="https://marketplace-focus.vercel.app/assets/og-image.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Marketplace Focus",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome, Edge, Firefox",
+      "description": "A browser extension that blocks Facebook Reels so users can focus on Marketplace deals.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "url": "https://marketplace-focus.vercel.app/",
+      "downloadUrl": "https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Marketplace Focus block all Reels links?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In strict mode, Marketplace Focus hides Reels entry points and redirects if a Reels page opens. Light mode only hides entry points."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I allow Reels on specific pages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can add exception rules for profiles, pages, host/path patterns, or full URLs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this extension free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Marketplace Focus is free to install and use."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Marketplace Focus home">
+      <img src="/assets/logo_v2.png" alt="" width="34" height="34" />
+      <span>Marketplace Focus</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="/privacy">Privacy</a>
+      <a class="nav-cta" href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Install</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">For serious Marketplace sessions</p>
+      <h1>Turn Facebook into a deal desk, not a Reels trap.</h1>
+      <p class="hero-copy">
+        Marketplace Focus blocks Reels surfaces while you shop. Stay in flow with strict blocking, quick pause windows,
+        anti-bypass hard lock, and scheduled focus hours.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="compatibility">Also supports Edge and Firefox builds.</p>
+      <div class="hero-panel" role="img" aria-label="Marketplace Focus quick status panel">
+        <div class="pill-row">
+          <span class="pill on">Blocking ON</span>
+          <span class="pill pause">Pause 30m</span>
+          <span class="pill lock">Hard Lock</span>
+        </div>
+        <div class="panel-grid">
+          <article>
+            <h2>Strict Mode</h2>
+            <p>Hides Reels entry points and redirects if a Reels page opens.</p>
+          </article>
+          <article>
+            <h2>Smart Exceptions</h2>
+            <p>Allow specific profiles/pages without disabling protection globally.</p>
+          </article>
+          <article>
+            <h2>Schedule</h2>
+            <p>Activate blocking only when you are usually shopping or researching.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Built for focus under real distraction pressure</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Dual Blocking Modes</h3>
+          <p>Pick strict mode for redirects + hidden entry points, or light mode for minimal UI cleanup.</p>
+        </article>
+        <article class="card">
+          <h3>Hard Lock Control</h3>
+          <p>Disable quick bypass behavior with optional delayed turn-off countdown.</p>
+        </article>
+        <article class="card">
+          <h3>Custom Pause Window</h3>
+          <p>Pause for 5 to 180 minutes and resume instantly from the popup.</p>
+        </article>
+        <article class="card">
+          <h3>Confirm Before Slip</h3>
+          <p>Add confirmation prompts before disable and pause actions to reduce impulsive clicks.</p>
+        </article>
+        <article class="card">
+          <h3>Schedule by Day + Time</h3>
+          <p>Set active windows with support for overnight sessions and weekday-only routines.</p>
+        </article>
+        <article class="card">
+          <h3>No Account Needed</h3>
+          <p>Install and run locally with no signup wall. Keep control in your browser.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how" class="section steps">
+      <h2>How it works</h2>
+      <ol>
+        <li>Install Marketplace Focus from the Chrome Web Store.</li>
+        <li>Choose blocking strength and optional hard lock in Settings.</li>
+        <li>Set pause defaults, exception rules, and schedule windows.</li>
+        <li>Browse Marketplace with reduced Reels interruptions.</li>
+      </ol>
+    </section>
+
+    <section id="faq" class="section faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Does it work only on Marketplace pages?</summary>
+        <p>The extension runs on facebook.com and targets Reels surfaces so Marketplace sessions stay cleaner.</p>
+      </details>
+      <details>
+        <summary>Can I temporarily disable blocking?</summary>
+        <p>Yes. Use the popup toggle or pause button. You can also enforce extra friction through confirmations and hard lock.</p>
+      </details>
+      <details>
+        <summary>Will schedule override manual toggle?</summary>
+        <p>When schedule is enabled, active status follows your selected days and time windows automatically.</p>
+      </details>
+      <details>
+        <summary>Where do I report issues?</summary>
+        <p>Use the Chrome Web Store listing support channel linked below.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Marketplace Focus</strong>
+      <p>Facebook Reels blocker for distraction-resistant Marketplace work.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/privacy">Privacy</a>
+      <a href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Chrome Store</a>
+      <a href="https://www.buymeacoffee.com/marketplacefocus" target="_blank" rel="noopener noreferrer">Support</a>
+    </div>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

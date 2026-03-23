@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(zip -r ../../fb-market-chrome-1.8.zip .)",
+      "Bash(ls /Users/andrei/Desktop/fb-market/*.png)",
+      "Bash(zip -r fb-market-chrome-1.8.zip . --exclude \"*.zip\" --exclude \".git/*\" --exclude \"__MACOSX/*\" --exclude \"*.DS_Store\")",
+      "Bash(zip -r fb-market-chrome-1.9.zip manifest.json content.js background.js popup.html popup.js options.html options.js logo_v2.png logo_market.png _locales/)"
+    ],
+    "additionalDirectories": [
+      "/Users/andrei/Desktop/fb-market/scripts"
+    ]
+  }
+}

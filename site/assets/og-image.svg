@@ -1,0 +1,55 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101A33"/>
+      <stop offset="1" stop-color="#070D1B"/>
+    </linearGradient>
+    <linearGradient id="a" x1="130" y1="160" x2="420" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF6F4D"/>
+      <stop offset="1" stop-color="#FFD166"/>
+    </linearGradient>
+    <linearGradient id="b" x1="800" y1="180" x2="1060" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3BE0D0"/>
+      <stop offset="1" stop-color="#4D9EFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="172" cy="130" r="220" fill="#FF6F4D" fill-opacity="0.12"/>
+  <circle cx="1060" cy="80" r="210" fill="#3BE0D0" fill-opacity="0.12"/>
+  <rect x="78" y="80" width="1044" height="470" rx="28" fill="#111E3F" stroke="#2B4379" stroke-width="4"/>
+  <rect x="110" y="112" width="500" height="120" rx="16" fill="#0D1833"/>
+  <text x="136" y="168" fill="#F2F7FF" font-size="44" font-family="Sora, Arial, sans-serif" font-weight="700">
+    Marketplace Focus
+  </text>
+  <text x="136" y="214" fill="#C9D7FF" font-size="28" font-family="Space Grotesk, Arial, sans-serif">
+    Block Facebook Reels. Keep browsing deals.
+  </text>
+  <rect x="110" y="276" width="252" height="58" rx="29" fill="url(#a)"/>
+  <text x="143" y="314" fill="#1B0F11" font-size="24" font-family="Sora, Arial, sans-serif" font-weight="700">
+    STRICT MODE
+  </text>
+  <rect x="382" y="276" width="230" height="58" rx="29" fill="#203564" stroke="#35538E" stroke-width="2"/>
+  <text x="422" y="314" fill="#D3E3FF" font-size="24" font-family="Sora, Arial, sans-serif" font-weight="700">
+    HARD LOCK
+  </text>
+  <rect x="110" y="358" width="502" height="140" rx="18" fill="#0E1A36" stroke="#294173" stroke-width="2"/>
+  <text x="134" y="404" fill="#D3E3FF" font-size="24" font-family="Space Grotesk, Arial, sans-serif">
+    Pause windows, schedule, and smart exceptions.
+  </text>
+  <text x="134" y="444" fill="#9EB5EC" font-size="24" font-family="Space Grotesk, Arial, sans-serif">
+    Built for distraction-resistant Marketplace sessions.
+  </text>
+  <rect x="712" y="172" width="320" height="300" rx="24" fill="#0E1A36" stroke="#294173" stroke-width="2"/>
+  <rect x="744" y="210" width="194" height="42" rx="21" fill="#193059"/>
+  <text x="778" y="238" fill="#D5E3FF" font-size="20" font-family="Sora, Arial, sans-serif" font-weight="700">
+    Blocking ON
+  </text>
+  <rect x="744" y="272" width="220" height="42" rx="21" fill="#213A6B"/>
+  <text x="774" y="300" fill="#D5E3FF" font-size="20" font-family="Sora, Arial, sans-serif" font-weight="700">
+    Schedule Active
+  </text>
+  <rect x="744" y="334" width="186" height="42" rx="21" fill="url(#b)"/>
+  <text x="774" y="362" fill="#062D2B" font-size="20" font-family="Sora, Arial, sans-serif" font-weight="700">
+    No Reels Feed
+  </text>
+</svg>

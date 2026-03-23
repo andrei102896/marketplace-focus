@@ -1,0 +1,260 @@
+{
+  "extName": {
+    "message": "Marketplace Focus - Sin distracciones"
+  },
+  "extDescription": {
+    "message": "Bloquea Reels en Facebook y mantiene accesible el feed principal."
+  },
+  "badgeTitleOn": {
+    "message": "El bloqueo de Reels está activo"
+  },
+  "badgeTitleOff": {
+    "message": "El bloqueo de Reels está desactivado"
+  },
+  "badgeTitlePaused": {
+    "message": "El bloqueo de Reels está en pausa"
+  },
+  "popupTitle": {
+    "message": "Modo enfoque"
+  },
+  "popupSubtitle": {
+    "message": "Bloqueador de Reels con pausa, bloqueo fuerte y horario"
+  },
+  "popupBlockReelsLabel": {
+    "message": "Bloquear Reels"
+  },
+  "popupLoading": {
+    "message": "Cargando..."
+  },
+  "popupSettings": {
+    "message": "Ajustes"
+  },
+  "popupRate": {
+    "message": "Valorar"
+  },
+  "popupSupport": {
+    "message": "Apoyar"
+  },
+  "popupKeepBlocking": {
+    "message": "Seguir bloqueando"
+  },
+  "popupHardLockOnButton": {
+    "message": "Bloqueo fuerte activo"
+  },
+  "popupPauseButton": {
+    "message": "Pausar $1m"
+  },
+  "popupResumeNow": {
+    "message": "Reanudar ahora"
+  },
+  "popupStatusHardLockPending": {
+    "message": "Bloqueo fuerte: se apagará en $1."
+  },
+  "popupStatusOutsideSchedule": {
+    "message": "Fuera del horario. El bloqueo se activará automáticamente durante el horario."
+  },
+  "popupStatusBlockingDisabled": {
+    "message": "El bloqueo está desactivado."
+  },
+  "popupStatusHardLockOn": {
+    "message": "El bloqueo fuerte está activo. La pausa no está disponible."
+  },
+  "popupStatusPaused": {
+    "message": "En pausa (quedan $1)"
+  },
+  "popupStatusBlockingActive": {
+    "message": "Bloqueo activo."
+  },
+  "popupStatusBlockingActiveSchedule": {
+    "message": "Bloqueo activo (horario)."
+  },
+  "popupConfirmDisable": {
+    "message": "¿Desactivar el bloqueo?"
+  },
+  "popupConfirmResume": {
+    "message": "¿Reanudar el bloqueo ahora?"
+  },
+  "popupConfirmPause": {
+    "message": "¿Pausar el bloqueo durante $1 minutos?"
+  },
+  "optionsPageTitle": {
+    "message": "Ajustes del modo enfoque"
+  },
+  "optionsEyebrow": {
+    "message": "Modo enfoque"
+  },
+  "optionsTitle": {
+    "message": "Ajustes del modo enfoque"
+  },
+  "optionsSubtitle": {
+    "message": "Elige qué tan fuerte debe ser el bloqueo, si quieres usar bloqueo fuerte y cuándo se activa automáticamente."
+  },
+  "optionsTabsAriaLabel": {
+    "message": "Secciones de ajustes"
+  },
+  "optionsTabBlocking": {
+    "message": "Bloqueo"
+  },
+  "optionsTabControls": {
+    "message": "Controles"
+  },
+  "optionsTabSchedule": {
+    "message": "Horario"
+  },
+  "optionsBlockingModeTitle": {
+    "message": "¿Qué tan fuerte debe ser el bloqueo?"
+  },
+  "optionsChipChooseOne": {
+    "message": "Elige uno"
+  },
+  "optionsBlockingModeDescription": {
+    "message": "Decide qué debe pasar cuando Facebook intente mostrar Reels."
+  },
+  "optionsBlockingStrongTitle": {
+    "message": "Bloqueo fuerte (recomendado)"
+  },
+  "optionsBlockingStrongDescription": {
+    "message": "Oculta botones de Reels, bloquea enlaces de Reels y te devuelve a Inicio si se abre una página de Reels."
+  },
+  "optionsBlockingLightTitle": {
+    "message": "Bloqueo ligero"
+  },
+  "optionsBlockingLightDescription": {
+    "message": "Solo oculta botones de Reels. Si abres Reels directamente, Facebook puede seguir mostrándolo."
+  },
+  "optionsPauseTitle": {
+    "message": "Duración de pausa rápida"
+  },
+  "optionsPauseChip": {
+    "message": "Botón Pausa"
+  },
+  "optionsPauseDescription": {
+    "message": "Define cuánto tiempo desactiva el bloqueo el botón Pausa."
+  },
+  "optionsPauseFieldLabel": {
+    "message": "¿Cuánto debe durar la pausa?"
+  },
+  "optionsPauseHint": {
+    "message": "Elige cualquier valor entre 5 y 180 minutos."
+  },
+  "optionsExceptionsTitle": {
+    "message": "Excepciones inteligentes"
+  },
+  "optionsExceptionsChip": {
+    "message": "Lista permitida"
+  },
+  "optionsExceptionsDescription": {
+    "message": "Permite Reels en páginas o perfiles concretos añadiendo una regla por línea."
+  },
+  "optionsExceptionsFieldLabel": {
+    "message": "Páginas/perfiles permitidos"
+  },
+  "optionsExceptionsPlaceholder": {
+    "message": "Ejemplos:\n/tu-perfil\nhttps://www.facebook.com/tu.pagina\nfacebook.com/otra.pagina"
+  },
+  "optionsExceptionsHint": {
+    "message": "Las reglas pueden ser URLs completas, patrones host/ruta (facebook.com/pagina) o prefijos de ruta (/tu-perfil)."
+  },
+  "optionsFrictionTitle": {
+    "message": "Controles de fricción"
+  },
+  "optionsFrictionChip": {
+    "message": "Confirmaciones"
+  },
+  "optionsFrictionDescription": {
+    "message": "Añade confirmaciones antes de acciones que reducen el bloqueo."
+  },
+  "optionsConfirmDisableTitle": {
+    "message": "Confirmar antes de desactivar el bloqueo"
+  },
+  "optionsConfirmDisableDescription": {
+    "message": "Tendrás que confirmar antes de desactivar el bloqueador."
+  },
+  "optionsConfirmPauseTitle": {
+    "message": "Confirmar antes de pausar/reanudar"
+  },
+  "optionsConfirmPauseDescription": {
+    "message": "Tendrás que confirmar antes de pausar o reanudar el bloqueo."
+  },
+  "optionsHardLockTitle": {
+    "message": "Bloqueo fuerte"
+  },
+  "optionsHardLockChip": {
+    "message": "Anti evasión"
+  },
+  "optionsHardLockDescription": {
+    "message": "El bloqueo fuerte elimina la pausa rápida y puede retrasar el apagado del bloqueo."
+  },
+  "optionsHardLockEnableTitle": {
+    "message": "Activar bloqueo fuerte"
+  },
+  "optionsHardLockEnableDescription": {
+    "message": "La pausa se desactiva mientras el bloqueo fuerte está activo."
+  },
+  "optionsHardLockCooldownLabel": {
+    "message": "Retraso para apagar (minutos)"
+  },
+  "optionsHardLockCooldownHint": {
+    "message": "Pon 0 para apagar al instante. Cualquier valor mayor añade una cuenta atrás antes de apagar."
+  },
+  "optionsScheduleTitle": {
+    "message": "Horario"
+  },
+  "optionsScheduleChip": {
+    "message": "Auto encendido/apagado"
+  },
+  "optionsScheduleDescription": {
+    "message": "Activa el bloqueo automáticamente en los días y horas que elijas."
+  },
+  "optionsScheduleEnableTitle": {
+    "message": "Activar horario"
+  },
+  "optionsScheduleEnableDescription": {
+    "message": "Cuando está activo, el horario decide cuándo el bloqueo está encendido."
+  },
+  "optionsScheduleStartLabel": {
+    "message": "Hora de inicio"
+  },
+  "optionsScheduleEndLabel": {
+    "message": "Hora de fin"
+  },
+  "optionsScheduleDaysLabel": {
+    "message": "Días"
+  },
+  "weekdayMon": {
+    "message": "Lun"
+  },
+  "weekdayTue": {
+    "message": "Mar"
+  },
+  "weekdayWed": {
+    "message": "Mié"
+  },
+  "weekdayThu": {
+    "message": "Jue"
+  },
+  "weekdayFri": {
+    "message": "Vie"
+  },
+  "weekdaySat": {
+    "message": "Sáb"
+  },
+  "weekdaySun": {
+    "message": "Dom"
+  },
+  "optionsScheduleDaysHint": {
+    "message": "Para horarios nocturnos, elige el día en que empieza el horario."
+  },
+  "optionsSaveButton": {
+    "message": "Guardar cambios"
+  },
+  "optionsErrorSelectScheduleDay": {
+    "message": "Selecciona al menos un día para el horario."
+  },
+  "optionsSaveError": {
+    "message": "No se pudieron guardar los ajustes."
+  },
+  "optionsSaveSuccess": {
+    "message": "Ajustes guardados."
+  }
+}

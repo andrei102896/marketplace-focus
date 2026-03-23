@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marketplace-focus.vercel.app/sitemap.xml
