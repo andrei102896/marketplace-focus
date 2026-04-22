@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marketplace-distraction-free.vercel.app/sitemap.xml
+Sitemap: https://market-focus.andreiprojects.com/sitemap.xml

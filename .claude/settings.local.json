@@ -1,12 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(curl -s https://marketplace-focus.vercel.app/)",
-      "Bash(curl -s https://fb-market.vercel.app/)",
+      "Bash(curl -s https://market-focus.andreiprojects.com/)",
       "Bash(gh repo:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)"
     ]
   }
 }

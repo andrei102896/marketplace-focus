@@ -119,10 +119,7 @@ Script output:
   - root `manifest.json` is `1.9`
   - `manifests/manifest.chrome.json`, `manifest.edge.json`, `manifest.firefox.json` are `1.8`
 - `dist/` already exists with target folders; treat as build artifacts.
-- Vercel project linked from `site/`:
-  - Project: `andreis-projects-38e53a8e/marketplace`
-  - Primary alias domain: `https://marketplace-focus.vercel.app`
-  - Default generated alias may still exist: `https://marketplace-alpha-roan.vercel.app`
+- Marketing site: `https://market-focus.andreiprojects.com` (served from `site/`, historically also on Vercel aliases).
 
 ## Fast Re-Onboarding Checklist
 
