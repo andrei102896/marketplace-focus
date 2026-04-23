@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const scheduleStartTimeInput = document.getElementById("schedule-start-time");
     const scheduleEndTimeInput = document.getElementById("schedule-end-time");
     const scheduleDayInputs = Array.from(form.querySelectorAll('input[name="schedule-day"]'));
+    const hardLockConfigBlock = form.querySelector("[data-hard-lock-config]");
+    const scheduleConfigBlock = form.querySelector("[data-schedule-config]");
     const statusMessage = document.getElementById("status-message");
 
     const DEFAULT_BLOCK_MODE = "strict";
@@ -296,6 +298,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const applyInterlocks = () => {
         const hardLockEnabled = hardLockEnabledInput.checked;
         hardLockCooldownInput.disabled = !hardLockEnabled;
+        if (hardLockConfigBlock) {
+            hardLockConfigBlock.hidden = !hardLockEnabled;
+        }
 
         const scheduleEnabled = scheduleEnabledInput.checked;
         scheduleStartTimeInput.disabled = !scheduleEnabled;
@@ -303,6 +308,9 @@ document.addEventListener("DOMContentLoaded", () => {
         scheduleDayInputs.forEach((input) => {
             input.disabled = !scheduleEnabled;
         });
+        if (scheduleConfigBlock) {
+            scheduleConfigBlock.hidden = !scheduleEnabled;
+        }
     };
 
     const applySettings = (settings) => {

@@ -1,6 +1,6 @@
 # Agent Project Notes
 
-Last scanned: 2026-03-18
+Last scanned: 2026-04-23
 Workspace: `/Users/andrei/Desktop/fb-market`
 
 ## Project Summary
@@ -19,12 +19,17 @@ Browser extension for Facebook that blocks Reels entry points/pages to keep Mark
 - `content.js`: Reels detection/hiding, redirect behavior, mutation observer, route watcher, click interception.
 - `popup.html` + `popup.js`: quick on/off, pause/resume, hard lock pending-disable flow, open settings.
 - `options.html` + `options.js`: full settings UI (tabs: blocking, controls, schedule).
+- `extension.css`: shared extension design-system tokens/components for `options.html` and `popup.html`.
+- `logo_v2.png`: canonical extension/brand logo filename; source asset at repo root.
 - `manifests/manifest.*.json`: browser-specific manifest templates used by build script.
 - `scripts/build-browser-package.sh`: copies source + target manifest into `dist/<target>/`.
 - `CROSS_BROWSER.md`: short build notes.
+- `docs/DESIGN_SYSTEM_STITCH.md`: required compliance contract for Stitch design patterns.
+- `docs/stitch-design-system.raw.json`: raw Stitch design system payload snapshot.
 - `site/`: Vercel-ready SEO marketing site for the extension.
-  - `site/index.html`: landing page with structured data + feature/FAQ content.
+  - `site/index.html`: landing page with sectioned layout, comparison block for MarketClean, and hover states.
   - `site/privacy.html`: privacy policy page.
+  - `site/privacy/index.html`: directory route version used for local/static hosting compatibility (`/privacy/`).
   - `site/styles.css`: custom visual system (non-Tailwind palette).
   - `site/robots.txt` + `site/sitemap.xml`: crawl/indexing hints.
   - `site/vercel.json`: headers and clean URL config.
@@ -95,6 +100,7 @@ Options:
 - Blocking tab: mode, default pause duration, exceptions textarea.
 - Controls tab: confirm toggles + hard lock + cooldown.
 - Schedule tab: enable, start/end time, day selection.
+- Schedule and Hard Lock dependent fields are hidden until their section toggle is enabled.
 - Prevents schedule save when enabled and no day selected.
 
 ## Build / Packaging
@@ -109,17 +115,38 @@ Script output:
 
 - writes `dist/<target>/`
 - copies core source files, `_locales/`, `logo_v2.png`
+- copies `extension.css` for shared popup/options styling
 - copies `manifests/manifest.<target>.json` as `dist/<target>/manifest.json`
 - does not zip packages
+- website logo at `site/assets/logo_v2.png` should match root `logo_v2.png`
 
 ## Important Observations
 
-- This directory is not a git repository (`git status` fails with "not a git repository").
 - Version mismatch currently exists:
   - root `manifest.json` is `1.9`
   - `manifests/manifest.chrome.json`, `manifest.edge.json`, `manifest.firefox.json` are `1.8`
 - `dist/` already exists with target folders; treat as build artifacts.
 - Marketing site: `https://market-focus.andreiprojects.com` (served from `site/`, historically also on Vercel aliases).
+
+## Design System Compliance (Mandatory)
+
+Source of truth is the Stitch project design system:
+
+- Project: `projects/11055338306244620688`
+- Design system asset: `assets/b61ecc6034304400ae4f747d1a36eee1`
+- Name: `Premium Utility`
+- Raw payload snapshot: `docs/stitch-design-system.raw.json`
+
+Every user-facing page/surface must comply with these patterns:
+
+- Use Inter typography scale from Stitch (`display`, `h1`, `h2`, `body-lg`, `body-md`, `label-bold`, `label-md`, `caption`).
+- Use the dark high-contrast tonal layer stack (`#0d1117`, `#10141a`, `#181c22`, `#1c2026`, `#262a31`, `#31353c`).
+- Current website implementation uses higher-contrast border tokens for readability (`#2f3947`, `#45556b`, `#98aac3`).
+- Use `#1877F2` for primary actions and active states only.
+- No decorative gradients, glassmorphism, soft shadows, or rounded “pill” styling.
+- Prefer 0-4px corner radii, structured card headers, and segmented/tabbed controls with clear active indicators.
+- Do not use “local/truly local” as homepage marketing terminology; prefer user-facing benefit language (distance control, nearby results, cleaner feed).
+- Keep content factual: no invented logos/testimonials/metrics/capabilities.
 
 ## Fast Re-Onboarding Checklist
 

@@ -10,7 +10,7 @@
   />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="google-site-verification" content="PEm7q9zXvNrC6dEUBmngSmm3xVkm9rqvKZgp125V0_A" />
-  <meta name="theme-color" content="#101a33" />
+  <meta name="theme-color" content="#0d1117" />
   <link rel="canonical" href="https://market-focus.andreiprojects.com/" />
   <link rel="icon" href="/assets/logo_v2.png" type="image/png" />
   <meta property="og:type" content="website" />
@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="https://market-focus.andreiprojects.com/assets/og-image.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">
     {
@@ -83,126 +83,233 @@
   </script>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="Marketplace Focus home">
-      <img src="/assets/logo_v2.png" alt="" width="34" height="34" />
-      <span>Marketplace Focus</span>
-    </a>
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#faq">FAQ</a>
-      <a href="/privacy">Privacy</a>
-      <a class="nav-cta" href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Install</a>
-    </nav>
+    <div class="site-shell site-header-inner">
+      <a class="brand" href="/" aria-label="Marketplace Focus home">
+        <img src="/assets/logo_v2.png" alt="" width="32" height="32" />
+        <span>Marketplace Focus</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="/privacy">Privacy</a>
+        <a class="button button-primary" href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="site-shell page-main">
     <section class="hero">
-      <p class="eyebrow">For serious Marketplace sessions</p>
-      <h1>Turn Facebook into a deal desk, not a Reels trap.</h1>
-      <p class="hero-copy">
-        Marketplace Focus blocks Reels surfaces while you shop. Stay in flow with strict blocking, quick pause windows,
-        anti-bypass hard lock, and scheduled focus hours.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
-        <a class="btn btn-ghost" href="#how">See how it works</a>
-      </div>
-      <p class="compatibility">Also supports Edge and Firefox builds.</p>
-      <div class="hero-panel" role="img" aria-label="Marketplace Focus quick status panel">
-        <div class="pill-row">
-          <span class="pill on">Blocking ON</span>
-          <span class="pill pause">Pause 30m</span>
-          <span class="pill lock">Hard Lock</span>
+      <div>
+        <p class="eyebrow">Marketplace productivity tool</p>
+        <h1>Turn Facebook into a deal desk, not a Reels trap.</h1>
+        <p class="hero-copy">
+          Block Reels while you shop Marketplace with strict mode, quick pause, hard lock, and schedule controls.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+          <a class="button button-secondary" href="#how">See how it works</a>
         </div>
-        <div class="panel-grid">
-          <article>
-            <h2>Strict Mode</h2>
-            <p>Hides Reels entry points and redirects if a Reels page opens.</p>
-          </article>
-          <article>
-            <h2>Smart Exceptions</h2>
-            <p>Allow specific profiles/pages without disabling protection globally.</p>
-          </article>
-          <article>
-            <h2>Schedule</h2>
-            <p>Activate blocking only when you are usually shopping or researching.</p>
-          </article>
-        </div>
+        <p class="hero-note">Also supports Edge and Firefox builds.</p>
       </div>
+
+      <aside class="hero-panel" aria-label="Current protection status preview">
+        <div class="panel-head">
+          <h2>Live Rules Snapshot</h2>
+          <p>Aligned with extension settings tabs</p>
+        </div>
+        <ul class="status-list">
+          <li>
+            <span>
+              <span class="status-label">Blocking Mode</span>
+              <span class="status-copy">Strict redirect + entry-point hiding</span>
+            </span>
+            <span class="badge badge-success">Enabled</span>
+          </li>
+          <li>
+            <span>
+              <span class="status-label">Quick Pause</span>
+              <span class="status-copy">Default pause duration from settings</span>
+            </span>
+            <span class="badge">30 min</span>
+          </li>
+          <li>
+            <span>
+              <span class="status-label">Hard Lock</span>
+              <span class="status-copy">Optional delayed turn-off protection</span>
+            </span>
+            <span class="badge badge-warning">Optional</span>
+          </li>
+          <li>
+            <span>
+              <span class="status-label">Schedule</span>
+              <span class="status-copy">Day/time automation for focus windows</span>
+            </span>
+            <span class="badge badge-primary">Mon-Fri</span>
+          </li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="second-project" class="section project-section">
+      <div class="section-head">
+        <h2>Also Built for Marketplace Buyers: MarketClean</h2>
+        <p>Use MarketClean when your issue is listing quality: distance drift, noisy keyword matches, and repeated inventory.</p>
+      </div>
+      <div class="project-compare-grid">
+        <article class="card project-compare-card">
+          <div class="card-head"><h3>Marketplace Focus</h3></div>
+          <div class="card-body">
+            <p>Use for distraction control: block Reels, add friction, run focus schedules.</p>
+          </div>
+        </article>
+        <article class="card project-compare-card">
+          <div class="card-head"><h3>MarketClean</h3></div>
+          <div class="card-body">
+            <p>Use for cleaner listings: tighter radius, keyword filtering, less repeat clutter.</p>
+          </div>
+        </article>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-head"><h3>Tighter Distance Control</h3></div>
+          <div class="card-body">
+            <p>Hide far-away listings when Marketplace expands the radius beyond your intended range.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Filter Loose Matches</h3></div>
+          <div class="card-body">
+            <p>Use blocked words, required keywords, and exact phrases to cut irrelevant results.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head"><h3>Clean Repeated Inventory</h3></div>
+          <div class="card-body">
+            <p>Hide seen listings and reduce stale or unavailable clutter so fresh inventory is easier to scan.</p>
+          </div>
+        </article>
+      </div>
+      <article class="card project-card">
+        <div class="card-body">
+          <p>Explore MarketClean at <a class="project-link" href="https://market-clean.andreiprojects.com" target="_blank" rel="noopener noreferrer">market-clean.andreiprojects.com</a></p>
+          <p class="project-note">Free Chrome extension. Runs in your browser. No account required.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://market-clean.andreiprojects.com" target="_blank" rel="noopener noreferrer">Explore MarketClean</a>
+            <a class="button button-secondary" href="https://market-clean.andreiprojects.com/support.html" target="_blank" rel="noopener noreferrer">View Support Docs</a>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section id="features" class="section">
-      <h2>Built for focus under real distraction pressure</h2>
-      <div class="cards">
+      <div class="section-head">
+        <h2>Built for focus under real distraction pressure</h2>
+        <p>Core controls that keep Marketplace sessions focused and interruption-resistant.</p>
+      </div>
+      <div class="card-grid">
         <article class="card">
-          <h3>Dual Blocking Modes</h3>
-          <p>Pick strict mode for redirects + hidden entry points, or light mode for minimal UI cleanup.</p>
+          <div class="card-head"><h3>Dual Blocking Modes</h3></div>
+          <div class="card-body"><p>Choose strict redirects or lighter UI cleanup.</p></div>
         </article>
         <article class="card">
-          <h3>Hard Lock Control</h3>
-          <p>Disable quick bypass behavior with optional delayed turn-off countdown.</p>
+          <div class="card-head"><h3>Hard Lock Control</h3></div>
+          <div class="card-body"><p>Add a delay before turning blocking off.</p></div>
         </article>
         <article class="card">
-          <h3>Custom Pause Window</h3>
-          <p>Pause for 5 to 180 minutes and resume instantly from the popup.</p>
+          <div class="card-head"><h3>Custom Pause Window</h3></div>
+          <div class="card-body"><p>Set pause duration from 5 to 180 minutes.</p></div>
         </article>
         <article class="card">
-          <h3>Confirm Before Slip</h3>
-          <p>Add confirmation prompts before disable and pause actions to reduce impulsive clicks.</p>
+          <div class="card-head"><h3>Confirm Before Slip</h3></div>
+          <div class="card-body"><p>Require confirmation before disable or pause actions.</p></div>
         </article>
         <article class="card">
-          <h3>Schedule by Day + Time</h3>
-          <p>Set active windows with support for overnight sessions and weekday-only routines.</p>
+          <div class="card-head"><h3>Schedule by Day + Time</h3></div>
+          <div class="card-body"><p>Run blocking automatically by day and time.</p></div>
         </article>
         <article class="card">
-          <h3>No Account Needed</h3>
-          <p>Install and run locally with no signup wall. Keep control in your browser.</p>
+          <div class="card-head"><h3>Smart Exceptions</h3></div>
+          <div class="card-body"><p>Allow specific profiles or pages without turning off global protection.</p></div>
         </article>
       </div>
     </section>
 
-    <section id="how" class="section steps">
-      <h2>How it works</h2>
-      <ol>
-        <li>Install Marketplace Focus from the Chrome Web Store.</li>
-        <li>Choose blocking strength and optional hard lock in Settings.</li>
-        <li>Set pause defaults, exception rules, and schedule windows.</li>
-        <li>Browse Marketplace with reduced Reels interruptions.</li>
-      </ol>
+    <section id="how" class="section">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p>Four quick steps from install to reliable blocking.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <span class="step-index">01</span>
+          <h3>Install</h3>
+          <p>Add from Chrome Web Store.</p>
+        </article>
+        <article class="step">
+          <span class="step-index">02</span>
+          <h3>Configure Blocking</h3>
+          <p>Pick strict or light mode and pause default.</p>
+        </article>
+        <article class="step">
+          <span class="step-index">03</span>
+          <h3>Add Friction</h3>
+          <p>Enable confirmations or Hard Lock.</p>
+        </article>
+        <article class="step">
+          <span class="step-index">04</span>
+          <h3>Automate Schedule</h3>
+          <p>Choose days and hours for auto-on windows.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="faq" class="section faq">
-      <h2>FAQ</h2>
-      <details>
-        <summary>Does it work only on Marketplace pages?</summary>
-        <p>The extension runs on facebook.com and targets Reels surfaces so Marketplace sessions stay cleaner.</p>
-      </details>
-      <details>
-        <summary>Can I temporarily disable blocking?</summary>
-        <p>Yes. Use the popup toggle or pause button. You can also enforce extra friction through confirmations and hard lock.</p>
-      </details>
-      <details>
-        <summary>Will schedule override manual toggle?</summary>
-        <p>When schedule is enabled, active status follows your selected days and time windows automatically.</p>
-      </details>
-      <details>
-        <summary>Where do I report issues?</summary>
-        <p>Use the Chrome Web Store listing support channel linked below.</p>
-      </details>
+    <section id="faq" class="section">
+      <div class="section-head">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Does it work only on Marketplace pages?</summary>
+          <p>The extension runs on facebook.com and targets Reels surfaces so Marketplace sessions stay cleaner.</p>
+        </details>
+        <details>
+          <summary>Can I temporarily disable blocking?</summary>
+          <p>Yes. Use the popup toggle or pause button. You can also enforce extra friction through confirmations and hard lock.</p>
+        </details>
+        <details>
+          <summary>Will schedule override manual toggle?</summary>
+          <p>When schedule is enabled, active status follows your selected days and time windows automatically.</p>
+        </details>
+        <details>
+          <summary>Where do I report issues?</summary>
+          <p>Use the Chrome Web Store listing support channel linked below.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <h2>Ready to regain your focus?</h2>
+      <p>Install Marketplace Focus and keep Facebook useful for buying and research.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Add to Chrome</a>
+        <a class="button button-secondary" href="/privacy">Read privacy policy</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div>
-      <strong>Marketplace Focus</strong>
-      <p>Facebook Reels blocker for distraction-resistant Marketplace work.</p>
-    </div>
-    <div class="footer-links">
-      <a href="/privacy">Privacy</a>
-      <a href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Chrome Store</a>
-      <a href="https://www.buymeacoffee.com/marketplacefocus" target="_blank" rel="noopener noreferrer">Support</a>
+    <div class="site-shell site-footer-inner">
+      <div>
+        <h3>Marketplace Focus</h3>
+        <p>Facebook Reels blocker for distraction-resistant Marketplace work.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/privacy">Privacy</a>
+        <a href="https://chrome.google.com/webstore/detail/lchgjnkonkmccfpjjmnkbegibdgjocog" target="_blank" rel="noopener noreferrer">Chrome Store</a>
+        <a href="https://www.buymeacoffee.com/marketplacefocus" target="_blank" rel="noopener noreferrer">Support</a>
+      </div>
     </div>
   </footer>
 
