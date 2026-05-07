@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Marketplace Focus: Block Facebook Reels"
+    "message": "Marketplace Focus — Facebook Reels Blocker"
   },
   "extDescription": {
-    "message": "Block Facebook Reels and stay focused on Marketplace deals. Hard Lock, scheduled blocking, smart exceptions. Free, no account."
+    "message": "Block Facebook Reels so you can use Facebook for Marketplace, Groups, Messenger, friends, and family — without endless scrolling."
   },
   "badgeTitleOn": {
     "message": "Reels blocker is active"
@@ -15,10 +15,10 @@
     "message": "Reels blocker is paused"
   },
   "popupTitle": {
-    "message": "Focus Mode"
+    "message": "Facebook Reels Blocker"
   },
   "popupSubtitle": {
-    "message": "Reels blocker with pause, lock, and schedule"
+    "message": "Use Facebook without Reels"
   },
   "popupBlockReelsLabel": {
     "message": "Block Reels"
@@ -78,16 +78,16 @@
     "message": "Pause blocking for $1 minutes?"
   },
   "optionsPageTitle": {
-    "message": "Focus Mode Settings"
+    "message": "Facebook Reels Blocking Settings"
   },
   "optionsEyebrow": {
-    "message": "Focus Mode"
+    "message": "Marketplace Focus"
   },
   "optionsTitle": {
-    "message": "Focus Mode Settings"
+    "message": "Facebook Reels Blocking Settings"
   },
   "optionsSubtitle": {
-    "message": "Choose how strong the blocker should be, whether to use Hard Lock, and when blocking runs automatically."
+    "message": "Block Reels while keeping Facebook usable for Marketplace, Groups, Messenger, friends, family, and regular browsing."
   },
   "optionsTabsAriaLabel": {
     "message": "Settings sections"
@@ -108,19 +108,19 @@
     "message": "Choose One"
   },
   "optionsBlockingModeDescription": {
-    "message": "Pick what should happen when Facebook tries to show Reels."
+    "message": "Pick how Marketplace Focus should handle Facebook Reels surfaces."
   },
   "optionsBlockingStrongTitle": {
-    "message": "Strong Blocking (Recommended)"
+    "message": "Strict Focus Mode (Recommended)"
   },
   "optionsBlockingStrongDescription": {
-    "message": "Hides Reels buttons, blocks Reels links, and sends you back to Facebook Home if a Reels page opens."
+    "message": "Hides Reels entry points, blocks Reels links, and redirects if a Reels page opens."
   },
   "optionsBlockingLightTitle": {
-    "message": "Light Blocking"
+    "message": "Classic Facebook Mode"
   },
   "optionsBlockingLightDescription": {
-    "message": "Only hides Reels buttons. If you open Reels directly, Facebook may still show it."
+    "message": "Hides Reels entry points while keeping the rest of Facebook available."
   },
   "optionsPauseTitle": {
     "message": "Quick Pause Time"

@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="extension.css">
 </head>
 <body class="popup-page">
 <div class="popup-shell">
     <header class="popup-head">
-        <h2 data-i18n="popupTitle">Focus Mode</h2>
-        <p class="subtitle" data-i18n="popupSubtitle">Reels blocker with pause, lock, and schedule</p>
+        <h2 data-i18n="popupTitle">Facebook Reels Blocker</h2>
+        <p class="subtitle" data-i18n="popupSubtitle">Use Facebook without Reels</p>
     </header>
 
     <section class="popup-card">
@@ -28,6 +25,21 @@
     <section class="popup-card">
         <button id="pause-action" class="button button-secondary" type="button" data-i18n="popupLoading">Loading...</button>
         <p id="pause-status" data-i18n="popupLoading">Loading...</p>
+    </section>
+
+    <section class="popup-promo">
+        <span class="popup-promo-kicker">From the maker</span>
+        <div class="popup-promo-inner">
+            <span class="popup-promo-icon" aria-hidden="true">📸</span>
+            <div>
+                <p class="popup-promo-title">Polish your Marketplace photos</p>
+                <p class="popup-promo-copy">Frame listings, blur plates &amp; personal info - share-ready in seconds.</p>
+            </div>
+        </div>
+        <a class="popup-promo-cta" href="https://chromewebstore.google.com/detail/framedshot-screenshot-fra/ojodikaampkjmcldckbcgfohhcaaohhe" target="_blank" rel="noopener noreferrer">
+            Try FramedShot - Free
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
     </section>
 
     <footer class="popup-footer">

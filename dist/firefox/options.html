@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Focus Mode Settings</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Facebook Reels Blocking Settings</title>
     <link rel="stylesheet" href="extension.css">
 </head>
 <body class="settings-page">
 <form id="settings-form" class="settings-shell">
     <header class="settings-top">
         <div>
-            <p class="settings-kicker" data-i18n="optionsEyebrow">Focus Mode</p>
-            <h1 data-i18n="optionsTitle">Focus Mode Settings</h1>
-            <p class="settings-subtitle" data-i18n="optionsSubtitle">Choose how strong the blocker should be, whether to use Hard Lock, and when blocking runs automatically.</p>
+            <p class="settings-kicker" data-i18n="optionsEyebrow">Marketplace Focus</p>
+            <h1 data-i18n="optionsTitle">Facebook Reels Blocking Settings</h1>
+            <p class="settings-subtitle" data-i18n="optionsSubtitle">Block Reels while keeping Facebook usable for Marketplace, Groups, Messenger, friends, family, and regular browsing.</p>
         </div>
         <button id="save-button" class="button button-primary" type="submit" data-i18n="optionsSaveButton">Save changes</button>
     </header>
@@ -36,14 +33,14 @@
                         <h2 data-i18n="optionsBlockingModeTitle">How Strong Should Blocking Be?</h2>
                         <span class="chip" data-i18n="optionsChipChooseOne">Choose One</span>
                     </div>
-                    <p class="panel-description" data-i18n="optionsBlockingModeDescription">Pick what should happen when Facebook tries to show Reels.</p>
+                    <p class="panel-description" data-i18n="optionsBlockingModeDescription">Pick how Marketplace Focus should handle Facebook Reels surfaces.</p>
 
                     <div class="option-grid">
                         <label class="mode-option">
                             <input type="radio" name="block-mode" value="strict">
                             <span class="mode-body">
-                                <span class="mode-title" data-i18n="optionsBlockingStrongTitle">Strong Blocking (Recommended)</span>
-                                <span class="mode-copy" data-i18n="optionsBlockingStrongDescription">Hides Reels buttons, blocks Reels links, and sends you back to Facebook Home if a Reels page opens.</span>
+                                <span class="mode-title" data-i18n="optionsBlockingStrongTitle">Strict Focus Mode (Recommended)</span>
+                                <span class="mode-copy" data-i18n="optionsBlockingStrongDescription">Hides Reels entry points, blocks Reels links, and redirects if a Reels page opens.</span>
                             </span>
                             <span class="mode-dot" aria-hidden="true"></span>
                         </label>
@@ -51,8 +48,8 @@
                         <label class="mode-option">
                             <input type="radio" name="block-mode" value="hide_only">
                             <span class="mode-body">
-                                <span class="mode-title" data-i18n="optionsBlockingLightTitle">Light Blocking</span>
-                                <span class="mode-copy" data-i18n="optionsBlockingLightDescription">Only hides Reels buttons. If you open Reels directly, Facebook may still show it.</span>
+                                <span class="mode-title" data-i18n="optionsBlockingLightTitle">Classic Facebook Mode</span>
+                                <span class="mode-copy" data-i18n="optionsBlockingLightDescription">Hides Reels entry points while keeping the rest of Facebook available.</span>
                             </span>
                             <span class="mode-dot" aria-hidden="true"></span>
                         </label>

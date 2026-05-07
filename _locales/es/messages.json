@@ -1,9 +1,9 @@
 {
   "extName": {
-    "message": "Marketplace Focus - Sin distracciones"
+    "message": "Marketplace Focus: bloqueador de Reels"
   },
   "extDescription": {
-    "message": "Bloquea Reels en Facebook y mantiene accesible el feed principal."
+    "message": "Bloquea Reels para usar Facebook en Marketplace, grupos, Messenger, amigos, familia y uso normal. Sin cuenta ni seguimiento."
   },
   "badgeTitleOn": {
     "message": "El bloqueo de Reels está activo"
@@ -15,10 +15,10 @@
     "message": "El bloqueo de Reels está en pausa"
   },
   "popupTitle": {
-    "message": "Modo enfoque"
+    "message": "Bloqueador de Reels"
   },
   "popupSubtitle": {
-    "message": "Bloqueador de Reels con pausa, bloqueo fuerte y horario"
+    "message": "Usa Facebook sin bucles de Reels"
   },
   "popupBlockReelsLabel": {
     "message": "Bloquear Reels"
@@ -78,16 +78,16 @@
     "message": "¿Pausar el bloqueo durante $1 minutos?"
   },
   "optionsPageTitle": {
-    "message": "Ajustes del modo enfoque"
+    "message": "Ajustes del bloqueo de Reels"
   },
   "optionsEyebrow": {
-    "message": "Modo enfoque"
+    "message": "Marketplace Focus"
   },
   "optionsTitle": {
-    "message": "Ajustes del modo enfoque"
+    "message": "Ajustes del bloqueo de Reels"
   },
   "optionsSubtitle": {
-    "message": "Elige qué tan fuerte debe ser el bloqueo, si quieres usar bloqueo fuerte y cuándo se activa automáticamente."
+    "message": "Bloquea Reels y conserva Facebook para Marketplace, grupos, Messenger, amigos, familia y uso normal."
   },
   "optionsTabsAriaLabel": {
     "message": "Secciones de ajustes"
@@ -108,19 +108,19 @@
     "message": "Elige uno"
   },
   "optionsBlockingModeDescription": {
-    "message": "Decide qué debe pasar cuando Facebook intente mostrar Reels."
+    "message": "Elige cómo debe actuar Marketplace Focus ante las superficies de Reels."
   },
   "optionsBlockingStrongTitle": {
-    "message": "Bloqueo fuerte (recomendado)"
+    "message": "Modo enfoque estricto (recomendado)"
   },
   "optionsBlockingStrongDescription": {
-    "message": "Oculta botones de Reels, bloquea enlaces de Reels y te devuelve a Inicio si se abre una página de Reels."
+    "message": "Oculta entradas de Reels, bloquea enlaces de Reels y redirige si se abre una página de Reels."
   },
   "optionsBlockingLightTitle": {
-    "message": "Bloqueo ligero"
+    "message": "Modo Facebook clásico"
   },
   "optionsBlockingLightDescription": {
-    "message": "Solo oculta botones de Reels. Si abres Reels directamente, Facebook puede seguir mostrándolo."
+    "message": "Oculta entradas de Reels y mantiene disponible el resto de Facebook."
   },
   "optionsPauseTitle": {
     "message": "Duración de pausa rápida"
