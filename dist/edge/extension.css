@@ -575,7 +575,7 @@ textarea:focus-visible {
 
 .popup-promo {
   border: 1px solid var(--ds-border);
-  border-left: 3px solid #ffbf00;
+  border-left: 3px solid #2d88ff;
   background: var(--ds-surface);
   padding: var(--ds-space-3);
   display: grid;
@@ -589,7 +589,7 @@ textarea:focus-visible {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #ffbf00;
+  color: #2d88ff;
 }
 
 .popup-promo-inner {
@@ -603,6 +603,7 @@ textarea:focus-visible {
   line-height: 1;
   flex-shrink: 0;
   margin-top: 1px;
+  color: #2d88ff;
 }
 
 .popup-promo-title {
@@ -625,9 +626,9 @@ textarea:focus-visible {
   justify-content: center;
   gap: 6px;
   padding: 8px 12px;
-  border: 1px solid #ffbf00;
+  border: 1px solid #2d88ff;
   background: transparent;
-  color: #ffbf00;
+  color: #2d88ff;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -638,8 +639,8 @@ textarea:focus-visible {
 }
 
 .popup-promo-cta:hover {
-  background: #ffbf00;
-  color: #402d00;
+  background: #2d88ff;
+  color: #ffffff;
 }
 
 .popup-footer {

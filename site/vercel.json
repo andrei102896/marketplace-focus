@@ -1,6 +1,14 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/block-facebook-reels", "destination": "/how-to-block-facebook-reels", "permanent": true },
+    { "source": "/remove-facebook-reels", "destination": "/how-to-block-facebook-reels", "permanent": true },
+    { "source": "/facebook-without-reels", "destination": "/how-to-block-facebook-reels", "permanent": true },
+    { "source": "/facebook-marketplace-without-reels", "destination": "/how-to-block-facebook-reels", "permanent": true },
+    { "source": "/classic-facebook-without-reels", "destination": "/strict-mode-vs-light-mode", "permanent": true },
+    { "source": "/facebook-marketplace-productivity-tool", "destination": "/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
